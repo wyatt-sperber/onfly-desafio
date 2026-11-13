@@ -16,3 +16,13 @@ select = ["E", "F", "I"]
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = "-ra"
+
+[tool.coverage.run]
+source = ["src/onfly_report"]
+branch = true
+parallel = true
+patch = ["subprocess"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
